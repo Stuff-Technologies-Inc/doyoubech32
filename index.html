@@ -42,7 +42,7 @@
 $(document).ready(function(){
   $("#exchangeSearch").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#exchnagesBech32 tr").filter(function() {
+    $("#exchangesBech32 tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
