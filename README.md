@@ -11,3 +11,7 @@ List is broken down into Exchanges and Wallets right now.
 ## Wallets: 
 - "Generates Bech32 Deposit Addresses?" - Can you receive coins into your own Bech32 Address
 - "Allows Withdrawals to Bech32 Addresses?" - Can you Scan/Send to Bech32 addresses?
+
+
+
+### Want to add your Exchange/Wallet? Submit a pull request! 
