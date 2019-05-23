@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Do You Bech32?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Exchanges</h2>
+  <p>Type the name of an Exchange to see if they offer Bech32 Support:</p>  
+  <input class="form-control" id="exchangeSearch" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Exchange</th>
+        <th>Generates Bech32 Deposit Addresses?</th>
+        <th>Allows Withdrawals to Bech32 Addresses?</th>
+      </tr>
+    </thead>
+    <tbody id="exchangesBech32">
+      <tr>
+        <td>Bitstamp</td>
+        <td>No</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>Kraken</td>
+        <td>No</td>
+        <td>Unknown</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#exchangeSearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#exchnagesBech32 tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
